@@ -2,7 +2,7 @@
 
 namespace Algorithms.Sorting
 {
-    public class MergeSort2 : ISort
+    public class MergeSort2Parallel : ISort
     {
         public int[] Sort(int[] array)
         {
@@ -34,7 +34,7 @@ namespace Algorithms.Sorting
             return array.Select(x => new int[1] { x }).ToArray();
         }
 
-        static int[] SortAndMerge(int[] a, int[] b)
+        private static int[] SortAndMerge(int[] a, int[] b)
         {
             int[] c = new int[a.Length + b.Length];
             int i = 0, j = 0, k = 0;
